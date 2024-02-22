@@ -10,10 +10,10 @@ const Nav: React.FC = () => {
           <Link href={`/`}>Home</Link>
         </li>
         <li className={styles.linkEl}>
-          <Link href={`/data-fetching`}>Data Fetching</Link>
+          <Link href={`/photos`}>Photos</Link>
         </li>
         <li className={styles.linkEl}>
-          <Link href={`/data-fetching`}>Data Fetching</Link>
+          <Link href={`/form-actions`}>Form Actions</Link>
         </li>
       </ul>
 
