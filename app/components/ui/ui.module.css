@@ -1,0 +1,46 @@
+/* nav */
+
+.nav {
+  display: flex;
+  flex-direction: column;
+
+  /* border: 1px solid #6e6c6c; */
+  width: 50%;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.navWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link {
+  min-width: 5em;
+  max-width: 7.5em;
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  padding: 0.25em 0.5em;
+  color: white;
+  background-color: #4b4848;
+  border: 1px solid #4b4848;
+  border-radius: 10px;
+
+}
+
+.navHr {
+  border: none;
+  border-top: 2px double #ddd; /* Voit mukauttaa viivan tyyliä ja väriä tarpeen mukaan */
+  margin: 20px 0; /* Lisätään tilaa ylä- ja alapuolelle */
+  border-color: rgb(143, 134, 134);
+}

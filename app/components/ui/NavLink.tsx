@@ -1,8 +1,8 @@
 'use client';
 import { useRouter } from 'next/navigation';
-import styles from './lib.module.css';
+import styles from './ui.module.css';
 
-export const NavLink: React.FC = () => {
+const NavLink: React.FC = () => {
   const router = useRouter();
 
   return (
@@ -11,7 +11,9 @@ export const NavLink: React.FC = () => {
       onClick={() => router.push('/dashboard')}
       className={styles.link}
     >
-      Data Fetching
+      Dashboard
     </button>
   );
 };
+
+export default NavLink;
