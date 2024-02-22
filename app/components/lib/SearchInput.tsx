@@ -1,13 +1,8 @@
 import styles from '@/app/styles/search-input.module.css';
 import { useState } from 'react';
+import { search } from '@/app/components/lib/actions';
 
 const SearchInput = () => {
-  const search = async (formData: FormData) => {
-    'use server';
-    let query = await formData.get('query');
-    console.log(`Searching for ${query}`);
-  };
-
   return (
     <form action={search} className={styles.searchForm}>
       <input
