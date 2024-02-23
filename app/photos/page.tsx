@@ -14,23 +14,32 @@ const getData = async () => {
 const DataFetching: React.FC = async () => {
   const data = await getData();
 
-  const oneAlbum = await data.filter((item) => item.albumId === 1);
-  console.log(oneAlbum);
-
   return (
     <section className={styles.container}>
-      <h3 className={styles.title}>Data Fetching</h3>
-      {oneAlbum.map((photo) => (
-        <div key={photo.id} className={styles.photo}>
-          <h5 className={styles.photoTitle}>{photo.title}</h5>
-          <Image
-            src={photo.thumbnailUrl}
-            alt={photo.title}
-            width={150}
-            height={150}
-          />
-        </div>
-      ))}
+      <h3 className={styles.title}>Photos</h3>
+      {data.map(
+        (
+          photo: [
+            {
+              albumId: number;
+              id: number;
+              title: string;
+              url: string;
+              thumbnailUrl: string;
+            }
+          ]
+        ) => (
+          <div key={photo.id} className={styles.photo}>
+            <Image
+              src={photo.thumbnailUrl}
+              alt={photo.title}
+              width={100}
+              height={100}
+            />
+            <p>{photo.title}</p>
+          </div>
+        )
+      )}
     </section>
   );
 };

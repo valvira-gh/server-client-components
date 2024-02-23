@@ -15,6 +15,7 @@ const Nav: React.FC = () => {
         <li className={styles.linkEl}>
           <Link href={`/form-actions`}>Form Actions</Link>
         </li>
+
       </ul>
 
       <hr className={styles.navHr} />

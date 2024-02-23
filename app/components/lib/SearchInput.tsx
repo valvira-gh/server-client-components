@@ -1,8 +1,8 @@
 import styles from '@/app/styles/search-input.module.css';
-import { useState } from 'react';
+import { useState, useRef, useOptimistic } from 'react';
 import { search } from '@/app/components/lib/actions';
 
-const SearchInput = () => {
+const SearchInput = ({ queries, sendQueries }) => {
   return (
     <form action={search} className={styles.searchForm}>
       <input
